@@ -10,10 +10,10 @@ const ButtonRemovePosts = ({ postId }: any) => {
   };
   return (
     <button
-      style={{ border: "1px solid cyan", padding: "10px" }}
       onClick={handleClick}
+      className="px-4 py-2 border border-cyan-500 text-cyan-500 rounded-lg hover:bg-cyan-500 hover:text-white transition-colors"
     >
-      Remove post Button
+      Remove Post
     </button>
   );
 };

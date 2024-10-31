@@ -7,14 +7,20 @@ const PagePostDetails = async ({ params, searchParams }: any) => {
   const post = posts.find((postItem: any) => postItem.id == postId);
 
   return (
-    <div>
-      title:{post.title}
-      <br />
-      description:{post.description}
-      <br />
-      content:{post.content}
-      <br />
-      category:{post.category}
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-100 to-indigo-50 p-6 flex justify-center ">
+      <div className="max-w-2xl w-full bg-white/80 rounded-lg shadow-lg p-8">
+        <h1 className="text-4xl font-bold text-indigo-700 mb-6">
+          {post.title}
+        </h1>
+
+        <span className="text-sm font-medium text-indigo-600 bg-indigo-50 py-1 px-3 rounded-lg">
+          Category: {post.category}
+        </span>
+        <p className="text-lg text-gray-700 mb-4">{post.description}</p>
+        <div className="text-gray-800 leading-relaxed mb-6 whitespace-pre-line">
+          {post.content}
+        </div>
+      </div>
     </div>
   );
 };
