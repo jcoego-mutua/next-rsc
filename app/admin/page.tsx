@@ -1,6 +1,7 @@
 import PostList from "@/components/PostList";
 import PostForm from "@/components/PostsFrom";
 import { getPosts } from "@/lib/getPosts";
+import { Suspense } from "react";
 
 const Page = async () => {
   const posts = await getPosts();
@@ -15,7 +16,9 @@ const Page = async () => {
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">
             Create New Post
           </h2>
-          <PostForm />
+          <Suspense fallback={<div>Loading....</div>}>
+            <PostForm />
+          </Suspense>
         </div>
 
         <div>
