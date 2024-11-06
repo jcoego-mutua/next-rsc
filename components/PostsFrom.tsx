@@ -72,7 +72,7 @@ const PostForm = () => {
         type="submit"
         className="w-full bg-indigo-600 text-white font-medium py-3 rounded-lg hover:bg-indigo-700 transition-colors"
       >
-        Submit
+        Publish
       </button>
     </form>
   );
