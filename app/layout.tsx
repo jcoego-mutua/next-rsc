@@ -3,6 +3,8 @@ import Link from "next/link";
 import "./globals.css";
 import { UserProvider } from "@/context/UserContext";
 import { getUser } from "@/lib/getUser";
+import LinkTraker from "@/components/thirdParty/LinkTracker";
+import { LinkTrackerClient } from "@/components/LinkTracker.client";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -38,6 +40,11 @@ export default async function RootLayout({
                   >
                     Admin
                   </Link>
+                </li>
+                <li>
+                  <LinkTrackerClient href="/admin">
+                    Admin tracker
+                  </LinkTrackerClient>
                 </li>
               </ul>
             </nav>
