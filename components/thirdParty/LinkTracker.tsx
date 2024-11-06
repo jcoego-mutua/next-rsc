@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+//Can´t use 'use client' here, given it is a third party library.
 
 const LinkTraker = ({ href, children }: any) => {
   const handleClickTrack = () => {
