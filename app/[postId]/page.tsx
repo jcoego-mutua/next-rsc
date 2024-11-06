@@ -16,17 +16,18 @@ const PagePostDetails = async ({ params, searchParams }: any) => {
         >
           {"<< Back"}
         </Link>
-        <h1 className="text-4xl font-bold text-indigo-700 mb-6">
+        <h1 className="mt-8 text-4xl font-bold text-indigo-700 mb-6">
           {post.title}
         </h1>
 
         <span className="text-sm font-medium text-indigo-600 bg-indigo-50 py-1 px-3 rounded-lg">
           Category: {post.category}
         </span>
-        <p className="text-lg text-gray-700 mb-4">{post.description}</p>
-        <div className="text-gray-800 leading-relaxed mb-6 whitespace-pre-line">
-          {post.content}
-        </div>
+
+        <div
+          dangerouslySetInnerHTML={{ __html: post.content }}
+          className="text-gray-800 leading-relaxed mb-6 whitespace-pre-line"
+        ></div>
       </div>
     </div>
   );
